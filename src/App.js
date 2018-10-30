@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import './App.css';
 import Personnage from './Personnage';
 import questions from './questions';
@@ -16,6 +17,20 @@ class App extends Component {
         
     )
     )
+=======
+
+import './App.css';
+
+import Home from './components/Home';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Home />
+      </div>
+    );
+>>>>>>> 0728b450cfd641e5c0a09a29fc5ec8e0ed87bc39
   }
 }
 
