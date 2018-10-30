@@ -13,6 +13,13 @@ const questions =[
     ansewers:['oui','non'],
     correctAnswer :0
 },
+{
+    deamon: 'casimir',
+    question :'button ?',
+    isEnable :true,
+    ansewers:['oui','non'],
+    correctAnswer :0
+},
 ]
 
 export default questions

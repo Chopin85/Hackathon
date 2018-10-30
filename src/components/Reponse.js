@@ -1,18 +1,21 @@
 import React from "react";
 
+
 const Reponse = props => {
+
+    const verifyReponse = (resp, player) => {
+        (resp === props.question.correctAnswer) ?  props.response(player , true) : props.response(player, false)
+    }
+
+    console.log(props)
   return (
     <div>
       <p>{props.question.question}</p>
-      <button onClick={() => props.getReponse(props.question.ansewers[0])}>
-        {props.question.ansewers[0]}
+      {props.question.ansewers.map((x, index) =>
+      <button key={index} onClick={() => verifyReponse(index, 1)}>
+        {x}
       </button>
-      <button onClick={() => props.getReponse(props.question.ansewers[1])}>
-        {props.question.ansewers[1]}
-      </button>
-      <button onClick={() => props.getReponse(props.question.ansewers[2])}>
-        {props.question.ansewers[2]}
-      </button>
+      )}
     </div>
   );
 };
