@@ -6,7 +6,7 @@ class Home extends Component {
     state = { 
         idSelect: null,
         people2 : [],
-        people : this.props.players,
+        people : this.props.listPlayers,
      }
 
      handelChange = (e) => {
@@ -39,7 +39,6 @@ class Home extends Component {
         console.log(this.state.idSelect)
         return ( 
             <div>
-                
                 {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
                     <Personnage image={element.photo} avatar={element.avatar} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
                 )}
