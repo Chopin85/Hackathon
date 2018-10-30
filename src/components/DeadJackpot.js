@@ -17,16 +17,16 @@ class DeadJackpot extends Component {
     }
 
     getRandom = (elem) => {
-        return (Math.floor(Math.random() * Math.floor(elem)))+1;
+    return (Math.floor(Math.random() * Math.floor(elem)))+1;
     }
     
     render() { 
         return ( 
             <div>
                 <div>DeadJackpot</div>
-                    <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(this.props.listPlayers.length)}/>
-                    <MyDeathJackpot listDeath={jsonDeath} idDeath={this.getRandom(jsonDeath.length)}/>
-                    <Suplices listSuplices={jsonSuplices} idSuplice={this.getRandom(jsonSuplices.length)}/>
+                 <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(this.props.listPlayers.length)}/>
+                 <MyDeathJackpot listDeath={jsonDeath} idDeath={this.getRandom(jsonDeath.length)}/>
+                 <Suplices listSuplices={jsonSuplices} idSuplice={this.getRandom(jsonSuplices.length)}/>
             </div> 
         );
     }
