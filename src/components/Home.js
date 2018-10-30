@@ -37,22 +37,18 @@ class Home extends Component {
         // console.log(this.state.idSelect)
         return ( 
             <div className="Home">
-                {/* <Grid container spacing={8} justify="center" flex-direction="row"> */}
-                    
-                    <div className="avatars_home">
-                        {/* <Grid item xs={3}  className="item"> */}
-                        {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
-                            <Personnage image={'/img/' + element.id +'.png'} avatar={element.player} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
-                        )}
-                        {/* </Grid> */}
-                    </div>
-                    
-                {/* </Grid> */}
-                <div className="buttonHome_home">
-                <button onClick ={() => this.props.startGame(this.state.people)}> Start Game</button>
+
+                <Header />
+                <div className="avatars">
+                    {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
+                        <Personnage image={element.photo} avatar={element.avatar} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
+                    )}
+                </div>
+                <div className="buttonHome">
+                    <button onClick ={() => this.props.startGame(this.state.people)}> Start Game</button>
+                </div>
+
             </div>
-            </div>
-            
         );
     }
 }
