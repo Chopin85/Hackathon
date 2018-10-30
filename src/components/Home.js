@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Personnage from './Personnage';
+
+import { Grid }  from '@material-ui/core';
+
 import './home.css'
 import Header from './Header-Home';
 
@@ -35,6 +38,7 @@ class Home extends Component {
         // console.log(this.state.idSelect)
         return ( 
             <div className="Home">
+
                 <Header />
                 <div className="avatars">
                     {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
@@ -44,6 +48,7 @@ class Home extends Component {
                 <div className="buttonHome">
                     <button onClick ={() => this.props.startGame(this.state.people)}> Start Game</button>
                 </div>
+
             </div>
             
         );

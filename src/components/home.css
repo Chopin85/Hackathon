@@ -3,17 +3,27 @@
     height: 100vh;
 
 }
-.avatars{
-    
+.container {
+    width: 100vw;
+    border: 1px dashed red;
+
+}
+
+.item {
+    border: 1px solid red;
+    width: 1500px;
+}
+
+/*.avatars_home{
     display: flex;
     flex: row;
     justify-content: center;
-}
+} */
 
 
 /* Personnages */
 
-.Personnage {
+.Personnage_home {
     background: #1111;
     text-align: center;
     padding: 5px;
@@ -22,29 +32,35 @@
     flex-direction:column ; 
 }
 
-.Personnage p, img, input{
+.Personnage_home p, img, input{
     margin-bottom: 5px;
 
 }
 
-.Personnage p {
-    color: #fff;
+.Personnage_home img {
+    height: 200px;
+    width: 220px;
 }
 
-.Personnage input {
+.Personnage_home p {
+    color: #fff;
+    height: 35px;
+}
+
+.Personnage_home input {
     font-size: 15px;
     text-align: center;
     border: none;
     padding: 10px;
 }
 
-.buttonHome{
+.buttonHome_home{
     padding: 40px;
     text-align: center;
 }
 
 
-.buttonHome button {
+.buttonHome_home button {
     padding: 30px;
     width: 250px;
     border-radius: 10px;
@@ -53,7 +69,7 @@
     font-size: 25px;
 }
 
-.buttonHome button:hover {
+.buttonHome_home button:hover {
     color: #D90115;
     background: #000;
     border: 2px solid #fff;
