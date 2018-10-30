@@ -1,4 +1,7 @@
 import React from 'react';
+
+
+
 const Personnage = ({avatar, image, handleChange}) => (
     <div>
     <div>{avatar}</div>
