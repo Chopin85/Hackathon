@@ -11,14 +11,22 @@ import jsonPlayers from './constants/players';
 class App extends Component {
 
   state = {
+    CurrentPlayers :[],
     step: -1,
     cptQuestions : 0
   }
 
   componentDidMount() {
     this.setState({
-      step: 2
+      step: 1
     })
+  }
+
+  startGame =(players)=>{ 
+    this.setState( () => ({
+      CurrentPlayers :players,
+      step: 2
+    }));
   }
 
   response = (idPlayer, isCorrectAnswer) => {
@@ -49,7 +57,7 @@ class App extends Component {
       return <DeadJackpot listPlayers={jsonPlayers} />
     }
     else if (this.state.step === 1) {
-      return <Home listPlayers={jsonPlayers} />
+      return <Home listPlayers={jsonPlayers} startGame ={this.startGame}/>
     }
     else if (this.state.step === 4) {
       return <Finish listPlayers={jsonPlayers[0]} />
