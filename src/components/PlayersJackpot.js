@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './deadJackpot.css'
 
 class PlayersJackpot extends Component {
     // state = { 
@@ -19,15 +20,15 @@ class PlayersJackpot extends Component {
 
     render() { 
         return (  
-            <div>
-            
-            
-        <p>{this.props.listPlayers[this.props.idPlayers].avatar}</p>
-        <img src={this.props.listPlayers[this.props.idPlayers].photo} alt={this.props.listPlayers[this.props.idPlayers].avatar}/> 
-        <p>{this.props.listPlayers[this.props.idPlayers].player}</p>
-     
-        <div>{this.props.listPlayers[this.props.idPlayers].idPlayers}</div>
-    </div>
+            <div className="blocPlayer roulette">
+                <div className="roulette-child">
+                <hr/>
+                <p className="titles-roulette">{this.props.listPlayers[this.props.idPlayers].avatar}</p>
+                <img src={this.props.listPlayers[this.props.idPlayers].photo} alt={this.props.listPlayers[this.props.idPlayers].avatar}/> 
+                <p>{this.props.listPlayers[this.props.idPlayers].player}</p>
+                <hr/>
+                </div>
+            </div>
         );
     }
 }
