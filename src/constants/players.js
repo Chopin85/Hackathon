@@ -45,7 +45,8 @@ const players =[
             photo : "https://via.placeholder.com/200x200",
             gender: "female",
             skinColor: "light",
-            player : "", isAlive :false,
+            player : "", 
+            isAlive :false,
             hadQuestion : false,
         },
         {

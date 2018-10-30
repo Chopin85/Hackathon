@@ -12,11 +12,10 @@ class Questions extends Component {
             <div>
                 {this.props.listPlayers.map((e,i) => 
                     <Avatars key={i} avatar={e.avatar} photo={e.photo} />
-                    )}
-                    <Reponse getReponse={this.props.getReponse} question={this.props.question} />
-
-
-
+                )}
+                    <Reponse getReponse={this.props.response} question={this.props.question} />
+                    {/* <button onClick={() => this.props.response(1, true)}>ok</button> */}
+                    {/* <button onClick={() => this.props.response(1, false)}>ko</button> */}
             </div>
         );
     }
