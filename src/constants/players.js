@@ -5,7 +5,9 @@ const players =[
             photo : "https://via.placeholder.com/200x200",
             gender: "male",
             skinColor: "light",
-            player : ""
+            player : "",
+            isAlive :false,
+            hadQuestion : false,
         },
         {
             id: 2,
@@ -13,7 +15,9 @@ const players =[
             photo : "https://via.placeholder.com/200x200",
             gender: "male",
             skinColor: "light",
-            player : ""
+            player : "",
+            isAlive :false,
+            hadQuestion : false,
         },
         {
             id: 3,
@@ -21,7 +25,9 @@ const players =[
             photo : "https://via.placeholder.com/200x200",
             gender: "male",
             skinColor: "light",
-            player : ""
+            player : "",
+            isAlive :false,
+            hadQuestion : false,
         },
         {
             id: 4,
@@ -29,7 +35,9 @@ const players =[
             photo : "https://via.placeholder.com/200x200",
             gender: "male",
             skinColor: "light",
-            player : ""
+            player : "",
+            isAlive :false,
+            hadQuestion : false,
         },
         {
             id: 5,
@@ -37,7 +45,8 @@ const players =[
             photo : "https://via.placeholder.com/200x200",
             gender: "female",
             skinColor: "light",
-            player : ""
+            player : "", isAlive :false,
+            hadQuestion : false,
         },
         {
             id: 6,
@@ -45,7 +54,8 @@ const players =[
             photo : "https://via.placeholder.com/200x200",
             gender: "male",
             skinColor: "light",
-            player : ""
+            player : "", isAlive :false,
+            hadQuestion : false,
         }
     ]
 
