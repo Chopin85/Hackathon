@@ -13,8 +13,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <DeadJackpot listPlayers ={players} />
-      <Questions listPlayers ={players} question ={questions[0]} />
+        {/* <DeadJackpot listPlayers ={players} /> */}
+        <Questions listPlayers ={players} question ={questions[0]} />
         {/* <Home  players ={players} /> */}
       </div>
     );
