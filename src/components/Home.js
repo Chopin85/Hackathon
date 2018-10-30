@@ -42,7 +42,7 @@ class Home extends Component {
                 <Header />
                 <div className="avatars">
                     {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
-                        <Personnage image={element.photo} avatar={element.avatar} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
+                        <Personnage image={element.photo} avatar={element.avatar}  player= {element.player} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
                     )}
                 </div>
                 <div className="buttonHome">
