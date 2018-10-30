@@ -1,25 +1,8 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import './App.css';
-import Personnage from './Personnage';
-import questions from './questions';
-import players from './players';
-import { element } from 'prop-types';
-
-
-class App extends Component {
-  render() {
-
-    return(
-      players.map(element =>(
-        <Personnage avatar ={element.avatar} image ={element.photo} />
-      )
-        
-    )
-    )
-=======
 
 import './App.css';
+import questions from './constants/questions';
+import players from './constants/players'
 
 import Home from './components/Home';
 
@@ -27,10 +10,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Home />
+        <Home  players ={players} />
       </div>
     );
->>>>>>> 0728b450cfd641e5c0a09a29fc5ec8e0ed87bc39
   }
 }
 
