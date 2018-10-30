@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import Personnage from './Personnage';
+
+import { Grid }  from '@material-ui/core';
+
 import './home.css'
+import Header from './Header-Home';
 
 class Home extends Component {
     state = { 
@@ -34,14 +38,17 @@ class Home extends Component {
         // console.log(this.state.idSelect)
         return ( 
             <div className="Home">
-                <div className="avatars">
-                {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
-                    <Personnage image={element.photo} avatar={element.avatar} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
-                )}
+
+                <Header />
+                <div className="avatars_home">
+                    {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
+                        <Personnage image={'/img/' + element.id + '.png'} avatar={element.avatar}  player= {element.player} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
+                    )}
                 </div>
-                <div className="buttonHome">
-                <button onClick ={() => this.props.startGame(this.state.people)}> Start Game</button>
+                <div className="buttonHome_home">
+                    <button onClick ={() => this.props.startGame(this.state.people)}> Start Game</button>
                 </div>
+
             </div>
             
         );
