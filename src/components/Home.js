@@ -26,6 +26,9 @@ class Home extends Component {
             };
         });
         console.log("modif", this.state.people)
+        if (e.target.key === 'Enter') {
+            e.preventDefault()
+        }
      }
 
      getId = (id) => {
