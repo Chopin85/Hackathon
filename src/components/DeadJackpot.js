@@ -26,13 +26,13 @@ class DeadJackpot extends Component {
             <div className="death-roulette">
                 <p className="tooBad">Too bad, you died !</p>
                 <Grid container >
-                    <Grid item md={4} >
+                    <Grid item xs={12} md={4} >
                         <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(this.props.listPlayers.length)}/>
                     </Grid>
-                    <Grid item md={4}>
+                    <Grid item xs={12} md={4}>
                         <MyDeathJackpot listDeath={jsonDeath} idDeath={this.getRandom(jsonDeath.length)}/>
                     </Grid>
-                    <Grid item md={4} >
+                    <Grid item xs={12} md={4} >
                         <Suplices listSuplices={jsonSuplices} idSuplice={this.getRandom(jsonSuplices.length)}/>
                     </Grid>
                  </Grid>           
