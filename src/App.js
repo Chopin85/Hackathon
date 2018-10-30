@@ -22,9 +22,10 @@ class App extends Component {
     })
   }
 
-  startGame =(players)=>{ 
+  startGame =(players)=>{
+    const filterPlayers = players.filter(element => element.player !== "")
     this.setState( () => ({
-      CurrentPlayers :players,
+      CurrentPlayers :filterPlayers,
       step: 2
     }));
   }
@@ -48,6 +49,8 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.CurrentPlayers);
+    
     if (this.state.step === 2) {
       console.log("step2", this.state);
       
