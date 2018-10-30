@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Personnage from './Personnage';
 import './home.css'
+import Header from './Header-Home';
 
 class Home extends Component {
     state = { 
@@ -34,13 +35,14 @@ class Home extends Component {
         // console.log(this.state.idSelect)
         return ( 
             <div className="Home">
+                <Header />
                 <div className="avatars">
-                {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
-                    <Personnage image={element.photo} avatar={element.avatar} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
-                )}
+                    {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
+                        <Personnage image={element.photo} avatar={element.avatar} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
+                    )}
                 </div>
                 <div className="buttonHome">
-                <button onClick ={() => this.props.startGame(this.state.people)}> Start Game</button>
+                    <button onClick ={() => this.props.startGame(this.state.people)}> Start Game</button>
                 </div>
             </div>
             
