@@ -1,0 +1,28 @@
+
+.Home {
+    
+    display: flex;
+    flex: row;
+    justify-content: center;
+}
+
+
+/* Personnages */
+
+.Personnage {
+    background: #1111;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction:column ; 
+}
+
+.Personnage p, img, input{
+    margin-bottom: 5px;
+
+}
+
+.Personnage input {
+    font-size: 15px;
+}

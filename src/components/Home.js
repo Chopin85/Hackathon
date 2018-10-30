@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Personnage from './Personnage';
+import './home.css'
 
 
 class Home extends Component {
@@ -7,13 +8,13 @@ class Home extends Component {
         idSelect: null,
         people2 : [],
         people : this.props.players,
-     }
+    }
 
-     handelChange = (e) => {
-         let prova = this.state.people.find(e => e.id === this.state.idSelect)
-         prova.player = e.target.value
-         //console.log("provaaaaa",prova)
-         //console.log(this.state.people[0])
+    handelChange = (e) => {
+        let prova = this.state.people.find(e => e.id === this.state.idSelect)
+        prova.player = e.target.value
+        //console.log("provaaaaa",prova)
+        //console.log(this.state.people[0])
         //  this.setState(() => {
         //     people : [...this.state.people.filter(e => e.id !== prova.id), prova]
         // })
@@ -29,21 +30,22 @@ class Home extends Component {
         if (e.target.key === 'Enter') {
             e.preventDefault()
         }
-     }
+    }
 
-     getId = (id) => {
-         this.setState({idSelect : id})
-     }
+        getId = (id) => {
+            this.setState({idSelect : id})
+        }
 
     render() { 
+        console.log(this.state.idSelect)
         return ( 
-            <div>
+            <div className="Home">
                 
                 {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
                     <Personnage image={element.photo} avatar={element.avatar} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
                 )}
             </div>
-         );
+        );
     }
 }
  
