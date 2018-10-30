@@ -22,6 +22,7 @@ class PlayersJackpot extends Component {
         player:{}
      }
      getPlayer(){
+         console.log("random" + this.props.CurrentPlayers)
         this.props.listPlayers.filter(element => {
             if (element.id == this.props.idPlayers) {
                 this.setState({player :element})

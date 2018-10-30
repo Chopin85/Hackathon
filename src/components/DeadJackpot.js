@@ -14,6 +14,7 @@ class DeadJackpot extends Component {
         console.log("blabla" + this.props.listPlayers)
         return ( 
             <div>
+                <div>DeadJackpot</div>
                  <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(4)}/> 
             </div> 
         );
