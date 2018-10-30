@@ -9,16 +9,18 @@ import Home from './components/Home';
 
 class App extends Component {
   state ={
-    players :[]
+    CurrentPlayers :[]
 
   }
 
 
-startGame = (players) =>{
-  this.setState({players})
+startGame =(players)=>{ 
+ this.setState( () => ({CurrentPlayers :players}));
+
 }
 
   render() {
+    
     return (
       <div>
       {/* <DeadJackpot listPlayers ={players} />
