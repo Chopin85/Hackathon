@@ -40,12 +40,12 @@ class Home extends Component {
             <div className="Home">
 
                 <Header />
-                <div className="avatars">
+                <div className="avatars_home">
                     {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
                         <Personnage image={'/img/' + element.id + '.png'} avatar={element.avatar}  player= {element.player} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
                     )}
                 </div>
-                <div className="buttonHome">
+                <div className="buttonHome_home">
                     <button onClick ={() => this.props.startGame(this.state.people)}> Start Game</button>
                 </div>
 

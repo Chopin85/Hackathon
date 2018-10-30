@@ -3,16 +3,8 @@
     height: 100vh;
 
 }
-.container {
-    width: 100vw;
-    border: 1px dashed red;
 
-}
 
-.item {
-    border: 1px solid red;
-    width: 1500px;
-}
 
 .avatars_home{
     display: flex;
