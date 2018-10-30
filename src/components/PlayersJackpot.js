@@ -1,50 +1,32 @@
-// import React from 'react';
-
-
-// const PlayersJackpot = ({idPlayers, listPlayers}) => (
-    
-//     <div>
-//         {listPlayers.filter(element => {
-//             if (element.id == idPlayers) {
-//             <div>{element.avatar}</div>
-//             }
-//         })}
-//         <div>{idPlayers}</div>
-//     </div>
-
-// )
-// export default PlayersJackpot;
 import React, {Component} from 'react';
-import Personnage from './Personnage';
 
 class PlayersJackpot extends Component {
-    state = { 
-        player:{}
-     }
-     getPlayer(){
-         console.log("random" + this.props.CurrentPlayers)
-        this.props.listPlayers.filter(element => {
-            if (element.id == this.props.idPlayers) {
-                this.setState({player :element})
-            }
+    // state = { 
+    //     player:{}
+    //  }
+    //  getPlayer(){
+    //      console.log("random" + this.props.CurrentPlayers)
+    //     this.props.listPlayers.filter(element => {
+    //         if (element.id === this.props.idPlayers) {
+    //             this.setState({player :element})
+    //         }
 
-     }
-        )}
-        componentDidMount() {
-            this.getPlayer()
-        }
+    //  }
+        // )}
+        // componentDidMount() {
+        //     this.getPlayer()
+        // }
 
     render() { 
-        console.log(this.state.player.avatar)
         return (  
             <div>
             
             
-        <p>{this.state.player.avatar}</p>
-        <img src={this.state.player.photo}alt={this.state.player.avatar}/> 
-        <p>{this.state.player.player}</p>
+        <p>{this.props.listPlayers[this.props.idPlayers].avatar}</p>
+        <img src={this.props.listPlayers[this.props.idPlayers].photo} alt={this.props.listPlayers[this.props.idPlayers].avatar}/> 
+        <p>{this.props.listPlayers[this.props.idPlayers].player}</p>
      
-        <div>{this.props.idPlayers}</div>
+        <div>{this.props.listPlayers[this.props.idPlayers].idPlayers}</div>
     </div>
         );
     }
