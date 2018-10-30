@@ -1,5 +1,9 @@
-
 .Home {
+    background: #212121;
+    height: 100vh;
+
+}
+.avatars{
     
     display: flex;
     flex: row;
@@ -23,6 +27,35 @@
 
 }
 
+.Personnage p {
+    color: #fff;
+}
+
 .Personnage input {
     font-size: 15px;
+    text-align: center;
+    border: none;
+    padding: 10px;
 }
+
+.buttonHome{
+    padding: 40px;
+    text-align: center;
+}
+
+
+.buttonHome button {
+    padding: 30px;
+    width: 250px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background: #D90115;
+    font-size: 25px;
+}
+
+.buttonHome button:hover {
+    color: #D90115;
+    background: #000;
+    border: 2px solid #fff;
+}
+

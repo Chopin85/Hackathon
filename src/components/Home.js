@@ -6,12 +6,12 @@ class Home extends Component {
     state = { 
         idSelect: null,
         people : this.props.listPlayers,
-     }
+    }
 
-     handelChange = (e) => {
-         let prova = this.state.people.find(e => e.id === this.state.idSelect)
-         prova.player = e.target.value
- 
+    handelChange = (e) => {
+        let prova = this.state.people.find(e => e.id === this.state.idSelect)
+        prova.player = e.target.value
+
         this.setState(previousState => {
 
             //const a = previousState[index].name = "newNmae"
@@ -34,14 +34,18 @@ class Home extends Component {
         // console.log(this.state.idSelect)
         return ( 
             <div className="Home">
-
+                <div className="avatars">
                 {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
                     <Personnage image={element.photo} avatar={element.avatar} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
                 )}
+                </div>
+                <div className="buttonHome">
                 <button onClick ={() => this.props.startGame(this.state.people)}> Start Game</button>
+                </div>
             </div>
+            
         );
     }
 }
- 
+    
 export default Home;
