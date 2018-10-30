@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import PlayersJackpot from './PlayersJackpot'
+import MyDeathJackpot from './MyDeathJackpot';
+import Suplices from './Suplices';
+
+import jsonDeath from '../constants/DeathType';
+import jsonSuplices from '../constants/SuplicesType';
+
 
 class DeadJackpot extends Component {
     
@@ -7,15 +13,20 @@ class DeadJackpot extends Component {
     //en attente du nombre de joueurs dans le tableau 
 
     getRandomInt = (nbPlayers) => {
-        return (Math.floor(Math.random() * Math.floor(nbPlayers)))+1;
+        return (Math.floor(Math.random() * Math.floor(nbPlayers)));
       }
+
+    getRandom = (elem) => {
+    return (Math.floor(Math.random() * Math.floor(elem)))+1;
+    }
     
     render() { 
-        console.log("blabla" + this.props.listPlayers)
         return ( 
             <div>
                 <div>DeadJackpot</div>
-                 <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(4)}/> 
+                 <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(this.props.listPlayers.length)}/>
+                 <MyDeathJackpot listDeath={jsonDeath} idDeath={this.getRandom(jsonDeath.length)}/>
+                 <Suplices listSuplices={jsonSuplices} idSuplice={this.getRandom(jsonSuplices.length)}/>
             </div> 
         );
     }
