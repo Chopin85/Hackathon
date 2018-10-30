@@ -1,5 +1,4 @@
 import React from 'react';
-import players from '../constants/players';
 
 const Avatars = (props) => (
     <div>

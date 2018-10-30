@@ -10,12 +10,23 @@ import DeadJackpot from './components/DeadJackpot';
 import Home from './components/Home';
 
 class App extends Component {
+  state = {
+    reponse : null
+  }
+
+  //Function for get reponse from Reponse.js
+  getReponse = (repo) => {
+    this.setState({
+      reponse : repo
+    })
+  }
+
   render() {
     return (
       <div>
-        {/* <DeadJackpot listPlayers ={players} /> */}
-        <Questions listPlayers ={players} question ={questions[0]} />
-        {/* <Home  players ={players} /> */}
+        <DeadJackpot listPlayers ={players} />
+        <Home  players ={players} />
+        <Questions listPlayers ={players} question ={questions[0]} getReponse={this.getReponse} />
       </div>
     );
   }
