@@ -5,10 +5,12 @@
     width: 100%;
 }
 .tooBad{
-    color: white;
-    font-size: 30px;
+    color: red;
+    font-size: calc(12px + 5vw);
     padding: 30px;
     text-align: center;
+    font-family: Creepster, cursive;   
+
 }
 .roulette{
     display: flex;
@@ -46,4 +48,8 @@ hr {
 }
 .titles-roulette {
     font-size: 20px;
+}
+.avatar-img{
+    width: 100%;
+    padding: 20px;
 }

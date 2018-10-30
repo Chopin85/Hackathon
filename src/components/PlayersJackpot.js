@@ -24,7 +24,7 @@ class PlayersJackpot extends Component {
                 <div className="roulette-child">
                 <hr/>
                 <p className="titles-roulette">{this.props.listPlayers[this.props.idPlayers].avatar}</p>
-                <img src={this.props.listPlayers[this.props.idPlayers].photo} alt={this.props.listPlayers[this.props.idPlayers].avatar}/> 
+                <img className="avatar-img" src={this.props.listPlayers[this.props.idPlayers].photo} alt={this.props.listPlayers[this.props.idPlayers].avatar}/> 
                 <p>{this.props.listPlayers[this.props.idPlayers].player}</p>
                 <hr/>
                 </div>
