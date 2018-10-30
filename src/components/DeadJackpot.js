@@ -6,7 +6,7 @@ import Suplices from './Suplices';
 import jsonDeath from '../constants/DeathType';
 import jsonSuplices from '../constants/SuplicesType';
 
-
+let  idDeadPlayer =0;
 class DeadJackpot extends Component {
     
     state = { 
@@ -15,13 +15,18 @@ class DeadJackpot extends Component {
     //en attente du nombre de joueurs dans le tableau 
 
     getRandomInt = (nbPlayers) => {
-        return (Math.floor(Math.random() * Math.floor(nbPlayers)));
+         idDeadPlayer = (Math.floor(Math.random() * Math.floor(nbPlayers)));
+        return idDeadPlayer
       }
 
     getRandom = (elem) => {
+       
     return (Math.floor(Math.random() * Math.floor(elem)))+1;
     }
-    
+    componentDidMount(){
+        console.log("id du mort ",idDeadPlayer);
+        this.props.whoIsDead(idDeadPlayer)
+    }
     render() { 
         return ( 
             <div>

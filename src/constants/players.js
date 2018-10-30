@@ -36,7 +36,7 @@ const players =[
             gender: "male",
             skinColor: "light",
             player : "",
-            isAlive :false,
+            isAlive :true,
             hadQuestion : false,
         },
         {
