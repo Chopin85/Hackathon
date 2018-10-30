@@ -3,19 +3,27 @@ import PlayersJackpot from './PlayersJackpot'
 
 class DeadJackpot extends Component {
     
-    state = {  }
+    state = { 
+        idDeadPlayer :0
+     }
     //en attente du nombre de joueurs dans le tableau 
 
     getRandomInt = (nbPlayers) => {
-        return (Math.floor(Math.random() * Math.floor(nbPlayers)))+1;
+       
+        let idDeadPlayer = (Math.floor(Math.random() * Math.floor(nbPlayers)))+1;
+        this.setState({idDeadPlayer})
+        return  idDeadPlayer
       }
-    
+    componentDidMount(){
+        console.log('did mount ',this.state.idDeadPlayer);
+        
+    }
     render() { 
-        console.log("blabla" + this.props.listPlayers)
+        
         return ( 
             <div>
                 <div>DeadJackpot</div>
-                 <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(4)}/> 
+                 <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(this.props.listPlayers.length)}/> 
             </div> 
         );
     }
