@@ -14,8 +14,8 @@ class App extends Component {
     return (
       <div>
         <DeadJackpot listPlayers ={players} />
-      <Questions listPlayers ={players} question ={questions[0]} />
-        {/* <Home  players ={players} /> */}
+        <Questions listPlayers ={players} question ={questions[0]} />
+        <Home  players ={players} />
       </div>
     );
   }
