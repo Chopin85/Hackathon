@@ -36,7 +36,6 @@ class Home extends Component {
      }
 
     render() { 
-        console.log(this.state.idSelect)
         return ( 
             <div>
                 
