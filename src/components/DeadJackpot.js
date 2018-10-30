@@ -8,14 +8,14 @@ class DeadJackpot extends Component {
 
     getRandomInt = (nbPlayers) => {
         return (Math.floor(Math.random() * Math.floor(nbPlayers)))+1;
-      }
+    }
     
     render() { 
         console.log("blabla" + this.props.listPlayers)
         return ( 
             <div>
                 <div>DeadJackpot</div>
-                 <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(4)}/> 
+                <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(4)}/> 
             </div> 
         );
     }
