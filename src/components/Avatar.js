@@ -5,6 +5,8 @@ import './question.css'
 const Avatars = (props) => (
     
     <div className="Avatar_avatar">
+
+        {console.log(props)}
         <p>{props.avatar}</p>
         {(props.isAlive) ?(
             <img src={props.image}alt={props.avatar}/>)
@@ -19,4 +21,4 @@ const Avatars = (props) => (
         <p>{props.isAlive?"vivant":"mort"}</p>
     </div>
 )
-export default Avatars;
+export default Avatars; 

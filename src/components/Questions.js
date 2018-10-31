@@ -8,10 +8,10 @@ import './question.css'
 
 class Questions extends Component {
     state = { 
-        CurrentPlayers: this.props.CurrentPlayers, 
+        CurrentPlayers: this.props.getCurrent,
     }
     render() { 
-        console.log('props',this.props.listPlayers)
+        console.log('props',this.props.getCurrent,)
         return ( 
             <div >
                 <Header />

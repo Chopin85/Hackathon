@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Personnage from './Personnage';
+import Header from './Header-Home'
 
 import './home.css'
 

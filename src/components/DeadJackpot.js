@@ -16,15 +16,9 @@ class DeadJackpot extends Component {
     //en attente du nombre de joueurs dans le tableau 
 
     getRandomInt = (nbPlayers) => {
-<<<<<<< HEAD
-        return (Math.floor(Math.random() * Math.floor(nbPlayers)));
-    }
-
-=======
          idDeadPlayer = (Math.floor(Math.random() * Math.floor(nbPlayers)));
         return idDeadPlayer
       }
->>>>>>> 4d9482ded0306833271d4d192437a415582c0d96
     getRandom = (elem) => {
        
     return (Math.floor(Math.random() * Math.floor(elem)))+1;
