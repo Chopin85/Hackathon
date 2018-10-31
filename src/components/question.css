@@ -125,3 +125,8 @@
     background: #000 !important;
     border: 2px solid #fff !important;
 }
+@media all and (max-width: 767px){
+    .bloc-text {
+        width: 100%;
+    }
+}
