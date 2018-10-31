@@ -62,7 +62,7 @@ class App extends Component {
       return <Home listPlayers={jsonPlayers} startGame ={this.startGame}/>
     }
     else if (this.state.step === 4) {
-      return <Finish listPlayers={jsonPlayers[0]} />
+      return <Finish listPlayers={this.state.CurrentPlayers.filter(e => e.isAlive)} />
     }
     else {
       return <div>Error Step</div>
