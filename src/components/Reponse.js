@@ -1,8 +1,10 @@
 import React, {Component} from "react";
-import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+
 import './question.css'
 
 
@@ -59,9 +61,9 @@ class Reponse extends Component {
               <br/>
             </div>
               <div className="button-response" style={{display: 'flex', justifyContent: 'center'}}>
-                <Button className="btn-response" onClick={() => this.verifyReponse(parseInt(this.state.selectedValue), 1)} variant="contained">
+                <button className="btn-response" onClick={() => this.verifyReponse(parseInt(this.state.selectedValue), 1)} variant="contained">
                     Valid
-                </Button>
+                </button>
               </div>
             </div>
           );

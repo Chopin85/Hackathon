@@ -82,12 +82,12 @@ class App extends Component {
   response = (idPlayer, isCorrectAnswer) => {
     
     if ((isCorrectAnswer === true) && (this.state.cptQuestions === 2))
-    {
-      this.setState(previousState => ({
-        cptQuestions: previousState.cptQuestions + 1,
-        step: 4
-      })); 
-    }
+      {
+        this.setState(previousState => ({
+          cptQuestions: previousState.cptQuestions + 1,
+          step: 4
+        })); 
+      }
     else if (isCorrectAnswer === true) {
       this.setState(previousState => ({cptQuestions: previousState.cptQuestions + 1}));
     }
