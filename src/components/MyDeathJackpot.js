@@ -15,8 +15,8 @@ class MyDeathJackpot extends Component {
         )}
         componentDidMount() {
             this.getDeath()
+            window.scrollTo(0,0)
         }
-
     render() { 
         return (  
             <div className="blocDeath roulette">

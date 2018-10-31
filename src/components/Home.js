@@ -42,8 +42,11 @@ class Home extends Component {
             this.props.startGame(this.state.people)
     }
 
+    componentDidMount(){
+        window.scrollTo(0,0)
+    }
+
     render() { 
-        console.log("render")
         return ( 
             <div className="Home">
                 <Header />
@@ -58,7 +61,6 @@ class Home extends Component {
                 <div className="buttonHome_home">
                     <button onClick ={this.start}> Start Game</button>
                 </div>
-
             </div>
         );
     }

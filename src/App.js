@@ -8,6 +8,7 @@ import './App.css';
 import jsonQuestions from './constants/questions';
 import jsonPlayers from './constants/players';
 import PreHome from './components/PreHome';
+import Music from './components/Music';
 
 class App extends Component {
 
@@ -81,12 +82,12 @@ class App extends Component {
   response = (idPlayer, isCorrectAnswer) => {
     
     if ((isCorrectAnswer === true) && (this.state.cptQuestions === 2))
-    {
-      this.setState(previousState => ({
-        cptQuestions: previousState.cptQuestions + 1,
-        step: 4
-      })); 
-    }
+      {
+        this.setState(previousState => ({
+          cptQuestions: previousState.cptQuestions + 1,
+          step: 4
+        })); 
+      }
     else if (isCorrectAnswer === true) {
       this.setState(previousState => ({cptQuestions: previousState.cptQuestions + 1}));
     }
@@ -98,22 +99,20 @@ class App extends Component {
   }
 
   render() {  
-    const cloneCurrentPlayers = [...jsonPlayers];
-    console.log('State', this.state)
     if (this.state.step === 2) {
-      return <Questions CurrentPlayers={this.getCurrentPlayers()} question={jsonQuestions[this.state.cptQuestions]} response={this.response}/>
+      return <div><Questions CurrentPlayers={this.getCurrentPlayers()} question={jsonQuestions[this.state.cptQuestions]} response={this.response}/> <Music/></div>
     }
     else if (this.state.step === -1) {
         return <PreHome setStep={this.setStep}/>
     }
     else if (this.state.step === 3) {
-      return <DeadJackpot listPlayers={this.state.CurrentPlayers.filter(e => e.isAlive)} whoIsDead ={this.whoIsDead} />
+      return <div><DeadJackpot listPlayers={this.state.CurrentPlayers.filter(e => e.isAlive)} whoIsDead ={this.whoIsDead} /> <Music/></div>
     }
     else if (this.state.step === 1) {
-      return <Home listPlayers={jsonPlayers} startGame ={this.startGame}/>
+      return <div><Home listPlayers={jsonPlayers} startGame ={this.startGame}/> <Music/></div>
     }
     else if (this.state.step === 4) {
-      return <Finish listPlayers={this.state.CurrentPlayers.filter(e => e.isAlive)} reInit={this.reInitGame}/>
+      return <div><Finish listPlayers={this.state.CurrentPlayers.filter(e => e.isAlive)} reInit={this.reInitGame}/> <Music/></div>
     }
     else {
       return <div>Error Step</div>
