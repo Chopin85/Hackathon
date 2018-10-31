@@ -9,6 +9,7 @@ import jsonQuestions from './constants/questions';
 import jsonPlayers from './constants/players';
 
 import firebase from 'firebase'
+import { write } from 'fs';
 
 
   //FIREBASE
@@ -25,18 +26,16 @@ import firebase from 'firebase'
   const database = firebase.database();
   
 
-  function writeUserData() {
-    firebase.database().ref('questions/ddre' ).set({
-      
-        deamon: 'Freddy',
-        question :'gants?',
-        isEnable :true,
-        ansewers:['oui','non'],
-        correctAnswer :0
-
+  function writeUserData(userId, name, email) {
+    firebase.database().ref('users/' + userId).set({
+      name: name,
+      mail : email
     });
   }
-writeUserData()
+
+
+writeUserData("user1", "paolo","povero@gmail.com")
+writeUserData("user2", "test","test@gmail.com")
 
 class App extends Component {
 
@@ -60,7 +59,10 @@ class App extends Component {
   }
 
   startGame =(players)=>{
+    console.log("plaaaaaaa",players)
     const filterPlayers = players.filter(element => element.player !== "")
+    writeUserData(players)
+    
     this.setState( () => ({
       CurrentPlayers :filterPlayers,
       step: 2
