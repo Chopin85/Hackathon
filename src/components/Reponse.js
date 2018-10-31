@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import Radio from '@material-ui/core/Radio';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper';
 
 class Reponse extends Component {
      verifyReponse = (resp, player) => {
@@ -15,21 +17,23 @@ class Reponse extends Component {
       handleChange = event => {
         this.setState({ selectedValue: event.target.value });
       };
+
+      
     
     render() {
-
         return ( 
             <div>
-            <p>{this.props.question.question}</p>
+            <p style={{color: "White", display: 'flex', justifyContent: 'center'}} >{this.props.question.question}</p>
             {/* {this.props.question.ansewers.map((x, index) =>
             <button key={index} onClick={() => this.verifyReponse(index, 1)}>
               {x}
             </button>
             )} */}
 
-            
                 {this.props.question.ansewers.map((x, index) =>
-                    <div key={index} >
+                        <Grid item xs={12}>
+                        <Paper>
+                      
                         <Radio
                             checked={this.state.selectedValue === index.toString()}
                             onChange={this.handleChange}
@@ -37,14 +41,16 @@ class Reponse extends Component {
                             name="radio-button-demo"
                             aria-label="A"
                         />
-                        <p>{x}</p>
-                    </div>
+                        {x}
+                        </Paper>
+                        </Grid>
                 )}
-
               <br/>
-            <Button onClick={() => this.verifyReponse(parseInt(this.state.selectedValue), 1)} variant="contained">
-                ---Valid---
-            </Button>
+              <div style={{display: 'flex', justifyContent: 'center'}}>
+                <Button onClick={() => this.verifyReponse(parseInt(this.state.selectedValue), 1)} variant="contained">
+                    Valid
+                </Button>
+              </div>
           </div>
           );
     }
