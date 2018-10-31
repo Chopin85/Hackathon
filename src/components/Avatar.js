@@ -1,24 +1,26 @@
 import React from 'react';
 
 import './question.css'
+import './finish.css'
 
-const Avatars = (props) => (
+let className= '';
+
+class Avatars extends React.Component{
     
-    <div className="Avatar_avatar">
-
-        {console.log(props)}
-        <p>{props.avatar}</p>
-        {(props.isAlive) ?(
-            <img src={props.image}alt={props.avatar}/>)
-        :(
-        <img className ="dead" src={props.image}alt={props.avatar}/>)
-
-        }
-
-        <p>{props.player}</p>
-
-        
-        <p>{props.isAlive?"vivant":"mort"}</p>
-    </div>
-)
+    render() { 
+        this.props.isAlive?className="Avatar_avatar":className="Avatar_dead"       
+        return(
+            
+        <div>   
+            <div className={className}>            
+                <p>{this.props.avatar}</p>
+                <img src={this.props.image}alt={this.props.avatar}/>
+                {/* <p> {`is alive :${props.isAlive}`}</p> */}
+                <p>{this.props.player}</p>   
+            </div>
+        </div>
+        )
+    }
+    
+}
 export default Avatars; 

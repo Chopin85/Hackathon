@@ -2,6 +2,8 @@ import React from 'react';
 
 import Avatars from './Avatar';
 
+// import './finisn.css'
+
 
 class Finish extends React.Component{
 
@@ -12,9 +14,10 @@ class Finish extends React.Component{
         console.log('finish', this.state.CurrentPlayers)
         return (
             <div>
+                <h1>Finish</h1>
                 {this.state.CurrentPlayers.map((element,index) => {
                 return(
-                    <Avatars dead={element.isAlive} className="Avatar_questions" key={index} image={'/img/' + element.id + '.png'} avatar={element.avatar}  player= {element.player} />
+                    <Avatars dead={element.isAlive[1]} key={index} image={'/img/' + element.id + '.png'} avatar={element.avatar}  player= {element.player} />
                     )
                 }
             )}
