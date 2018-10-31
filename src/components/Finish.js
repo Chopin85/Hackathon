@@ -1,4 +1,5 @@
 import React from 'react';
+import Avatars from './Avatar'
 
 export default () => {
     return (
