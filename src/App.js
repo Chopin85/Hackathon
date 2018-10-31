@@ -54,7 +54,7 @@ class App extends Component {
     if (this.state.step === 2) {
       console.log("step2", this.state);
       
-      return <Questions listPlayers={jsonPlayers} question={jsonQuestions[this.state.cptQuestions]} response={this.response}/>
+      return <Questions CurrentPlayers={this.state.CurrentPlayers} listPlayers={jsonPlayers} question={jsonQuestions[this.state.cptQuestions]} response={this.response}/>
     }
     else if (this.state.step === 3) {
       return <DeadJackpot listPlayers={this.state.CurrentPlayers} />
