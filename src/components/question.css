@@ -48,6 +48,14 @@
     display: flex;
     margin: 2% 15%;
 }
+
+.response span{
+    color:white;
+}
+
+/* [class*="MuiFormControlLabel"] {
+ color: white !important;
+} */
 .radio{
     width: 60%;
     margin: auto;
