@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatars from './Avatar'
+import './dead.css'
 
-// import './finisn.css'
 const titleStyle = {
     fontWeight: '100',
     paddingTop: '70px ',
@@ -26,7 +26,7 @@ class Finish extends React.Component{
         console.log('finish', this.state.CurrentPlayers)
         return (
             <div style={{textAlign:"center"}}>
-                <h1 style={titleStyle}>Finish</h1>
+                <h1 style={titleStyle}>You survived</h1>
                 <div className="Avatar_finish">
                     {this.state.CurrentPlayers.map((element,index) => {
                         return(

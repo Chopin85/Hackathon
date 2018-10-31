@@ -5,9 +5,15 @@ import Header from './Header-Home'
 import './home.css'
 
 class Home extends Component {
+
+    // constructor () {
+    //     super();
+    //     console.log("constructor");
+    // }
+
     state = { 
         idSelect: null,
-        people : this.props.listPlayers,
+        people : this.props.listPlayers
     }
 
     handelChange = (e) => {
@@ -32,12 +38,15 @@ class Home extends Component {
     }
 
     start = () => {
-        if(this.state.people.filter(e => e.player.length !== 0).length > 0)
+        if(this.state.people.filter(e => e.player.length !== 0).length > 1)
             this.props.startGame(this.state.people)
     }
-            
+
+    componentDidMount(){
+        window.scrollTo(0,0)
+    }
+
     render() { 
-        // console.log(this.state.idSelect)
         return ( 
             <div className="Home">
                 <Header />
@@ -52,7 +61,6 @@ class Home extends Component {
                 <div className="buttonHome_home">
                     <button onClick ={this.start}> Start Game</button>
                 </div>
-
             </div>
         );
     }
