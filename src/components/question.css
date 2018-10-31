@@ -1,12 +1,59 @@
+.background-question{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    background-image: url(/img/ambiance1.jpg);
+    background-position: center;
 
+}
+.bloc-presentation2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.text-question1 {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.bloc-text {
+    width: 30%;
+    margin: 20px;
+}
+.text-question {
+    color: white;
+    padding: 10px;
+   
+}
+.img-esprit{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-image: url(/img/freddy-krueger.jpg);
+    background-position: center;
+    background-size: 100%;
+
+}
 .Questions {
     display: flex;
     flex: row;
     justify-content: center;
     flex-wrap: wrap;
     background: #212121;
+    padding: 30px;
 }
-
+.radio{
+    width: 60%;
+    margin: auto;
+    color: white;
+}
+.check {
+    color: white;
+}
+.button-response {
+    padding-bottom: 60px;
+}
 .Avatar_avatar {
     text-align: center;
     padding: 5px;

@@ -23,7 +23,7 @@ class Reponse extends Component {
     render() {
         return ( 
             <div>
-            <p style={{color: "White", display: 'flex', justifyContent: 'center'}} >{this.props.question.question}</p>
+            <p style={{color: "White", display: 'flex', justifyContent: 'center', fontSize:'20px'}} >{this.props.question.question}</p>
             {/* {this.props.question.ansewers.map((x, index) =>
             <button key={index} onClick={() => this.verifyReponse(index, 1)}>
               {x}
@@ -31,10 +31,10 @@ class Reponse extends Component {
             )} */}
 
                 {this.props.question.ansewers.map((x, index) =>
-                        <Grid item xs={12}>
-                        <Paper>
+                        <div className="radio">
                       
-                        <Radio
+                      
+                        <Radio className="check"
                             checked={this.state.selectedValue === index.toString()}
                             onChange={this.handleChange}
                             value={index.toString()}
@@ -42,12 +42,12 @@ class Reponse extends Component {
                             aria-label="A"
                         />
                         {x}
-                        </Paper>
-                        </Grid>
+                        
+                        </div>
                 )}
               <br/>
-              <div style={{display: 'flex', justifyContent: 'center'}}>
-                <Button onClick={() => this.verifyReponse(parseInt(this.state.selectedValue), 1)} variant="contained">
+              <div className="button-response" style={{display: 'flex', justifyContent: 'center'}}>
+                <Button className="button-response" onClick={() => this.verifyReponse(parseInt(this.state.selectedValue), 1)} variant="contained">
                     Valid
                 </Button>
               </div>
