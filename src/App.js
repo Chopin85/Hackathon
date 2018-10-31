@@ -8,7 +8,44 @@ import './App.css';
 import jsonQuestions from './constants/questions';
 import jsonPlayers from './constants/players';
 
+import firebase from 'firebase'
+
+
+  //FIREBASE
+  
+  firebase.initializeApp({
+    apiKey: "AIzaSyBU_RWzEqj7PxROhirm_rjrfsakcbQyMro",
+    authDomain: "my-project-1538754725763.firebaseapp.com",
+    projectId: "my-project-1538754725763",
+    databaseURL: "https://my-project-1538754725763.firebaseio.com/",
+    storageBucket: "my-project-1538754725763.appspot.com",
+  });
+  
+  // Initialize Cloud Firestore through Firebase
+  const database = firebase.database();
+  
+
+  function writeUserData() {
+    firebase.database().ref('questions/ddre' ).set({
+      
+        deamon: 'Freddy',
+        question :'gants?',
+        isEnable :true,
+        ansewers:['oui','non'],
+        correctAnswer :0
+
+    });
+  }
+writeUserData()
+
 class App extends Component {
+
+
+
+
+
+
+
 
   state = {
     CurrentPlayers :[],
