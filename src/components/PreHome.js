@@ -6,8 +6,10 @@ const titleStyle = {
     fontSize: 'calc(12px + 10vw)',
     color: 'red',
     position: 'relative',
-    top: '15vh'
+    top: '15vh',
 };
+
+
 
 const subtitleStyle = {
     fontWeight: '100',
@@ -25,7 +27,8 @@ const buttonStyle = {
     fontFamily: 'Creepster',
     fontSize: '5vw',
     width: '50%',
-    color: 'white'
+    color: 'white',
+    cursor :'pointer'
 };
 
 const fingerStyle = {
