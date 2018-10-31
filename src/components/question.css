@@ -28,3 +28,8 @@
     color: #fff;
     height: 35px;
 }
+
+
+.dead {
+    border: 3px dashed pink;
+}
