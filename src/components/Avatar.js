@@ -2,8 +2,7 @@ import React from 'react';
 
 import './question.css'
 
-const Avatars = (props) => (
-    
+const Avatars = (props) => (  
     <div className="Avatar_avatar">
         <p>{props.avatar}</p>
         {(props.isAlive) ?(

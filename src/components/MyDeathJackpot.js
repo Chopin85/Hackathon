@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './deadJackpot.css';
 
 class MyDeathJackpot extends Component {
     state = { 
@@ -22,7 +23,7 @@ class MyDeathJackpot extends Component {
                 <div className="roulette-child">
                     <hr/>
                     <p className="titles-roulette">{this.state.death.mort}</p>
-                    <img src={this.state.death.url} alt={this.state.death.mort}/> 
+                    <img className="giphy-img" src={this.state.death.url} alt={this.state.death.mort}/> 
                     <hr/>
                 </div>
              </div>
