@@ -1,0 +1,35 @@
+
+.Questions {
+    display: flex;
+    flex: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #212121;
+}
+
+.Avatar_avatar {
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction:column ; 
+}
+
+.Avatar_avatar p, img {
+    margin-bottom: 5px;
+}
+
+.Avatar_avatar img {
+    height: 200px;
+    width: 220px;
+}
+
+.Avatar_avatar p {
+    color: #fff;
+    height: 35px;
+}
+
+
+.dead {
+    border: 3px dashed pink;
+}

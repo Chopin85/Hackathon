@@ -1,0 +1,69 @@
+.avatars_home{
+    display: flex;
+    flex: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.text-presentation{
+    text-align: center;
+    color: white;    
+    font-size: 20px;
+    padding: 50px;
+    margin-bottom: 100px;
+    
+}
+
+/* Personnages */
+
+.Personnage_home {
+    background: #1111;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction:column ; 
+}
+
+.Personnage_home p, img, input{
+    margin-bottom: 5px;
+
+}
+
+.Personnage_home img {
+    height: 200px;
+    width: 220px;
+}
+
+.Personnage_home p {
+    color: #fff;
+    height: 35px;
+}
+
+.Personnage_home input {
+    font-size: 15px;
+    text-align: center;
+    border: none;
+    padding: 10px;
+}
+
+.buttonHome_home{
+    padding: 40px;
+    text-align: center;
+}
+
+
+.buttonHome_home button {
+    padding: 30px;
+    width: 250px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background: #D90115;
+    font-size: 25px;
+}
+
+.buttonHome_home button:hover {
+    color: #D90115;
+    background: #000;
+    border: 2px solid #fff;
+}
+
