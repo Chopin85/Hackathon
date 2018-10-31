@@ -41,7 +41,7 @@ class App extends Component {
       [...previousState.CurrentPlayers.filter(e => e.id !== deadPlayer.id), deadPlayer]
       };
      },() => {
-        if(this.checkSurvivors()) {
+        if(this.checkSurvivors() && (this.state.cptQuestions !== 2)) {
           this.setState((previousState) => {
             return {step:2,
               cptQuestions: previousState.cptQuestions + 1
