@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PlayersJackpot from './PlayersJackpot'
 import MyDeathJackpot from './MyDeathJackpot';
 import Suplices from './Suplices';
+import Grid from '@material-ui/core/Grid';
 
 import jsonDeath from '../constants/DeathType';
 import jsonSuplices from '../constants/SuplicesType';
@@ -25,12 +26,20 @@ class DeadJackpot extends Component {
 
     render() { 
         return ( 
-            <div>
-                <div>DeadJackpot</div>
-                 <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(this.props.listPlayers.length)}/>
-                 <MyDeathJackpot listDeath={jsonDeath} idDeath={this.getRandom(jsonDeath.length)}/>
-                 <Suplices listSuplices={jsonSuplices} idSuplice={this.getRandom(jsonSuplices.length)}/>
-                 <button onClick ={() => this.props.whoIsDead(idDeadPlayer)} >relance le jeux</button>
+            <div className="death-roulette">
+                <p className="tooBad">Too bad, you died !</p>
+                <Grid container >
+                    <Grid item xs={12} md={4} >
+                        <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(this.props.listPlayers.length)}/>
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                        <MyDeathJackpot listDeath={jsonDeath} idDeath={this.getRandom(jsonDeath.length)}/>
+                    </Grid>
+                    <Grid item xs={12} md={4} >
+                        <Suplices listSuplices={jsonSuplices} idSuplice={this.getRandom(jsonSuplices.length)}/>
+                    </Grid>
+                 </Grid>
+                 <button onClick ={() => this.props.whoIsDead(idDeadPlayer)} >relance le jeux</button>           
             </div> 
         );
     }

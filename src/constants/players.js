@@ -2,7 +2,7 @@ const players =[
         {
             id: 1,
             avatar: "Le sportif",
-            photo : "https://via.placeholder.com/200x200",
+            photo : "/img/1.png",
             gender: "male",
             skinColor: "light",
             player : "",
@@ -12,7 +12,7 @@ const players =[
         {
             id: 2,
             avatar: "La blonde",
-            photo : "https://via.placeholder.com/200x200",
+            photo : "/img/2.png",
             gender: "male",
             skinColor: "light",
             player : "",
@@ -22,7 +22,7 @@ const players =[
         {
             id: 3,
             avatar: "Le noir",
-            photo : "https://via.placeholder.com/200x200",
+            photo : "/img/3.png",
             gender: "male",
             skinColor: "light",
             player : "",
@@ -32,7 +32,7 @@ const players =[
         {
             id: 4,
             avatar: "Le geek",
-            photo : "https://via.placeholder.com/200x200",
+            photo : "/img/4.png",
             gender: "male",
             skinColor: "light",
             player : "",
@@ -42,7 +42,7 @@ const players =[
         {
             id: 5,
             avatar: "Le rebelle",
-            photo : "https://via.placeholder.com/200x200",
+            photo : "/img/5.png",
             gender: "female",
             skinColor: "light",
             player : "", 
@@ -52,7 +52,7 @@ const players =[
         {
             id: 6,
             avatar: "Chef d'enteprise",
-            photo : "https://via.placeholder.com/200x200",
+            photo : "/img/6.png",
             gender: "male",
             skinColor: "light",
             player : "", 
