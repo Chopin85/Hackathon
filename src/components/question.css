@@ -43,6 +43,9 @@
     background: #212121;
     padding: 30px;
 }
+.response {
+    background: #212121;
+}
 .radio{
     width: 60%;
     margin: auto;
