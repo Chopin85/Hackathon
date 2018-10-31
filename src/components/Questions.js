@@ -11,7 +11,7 @@ class Questions extends Component {
         CurrentPlayers: this.props.CurrentPlayers, 
     }
     render() { 
-        console.log('props',this.props.listPlayers)
+        console.log('props',this.props.CurrentPlayers)
         return ( 
             <div >
                 <Header />
@@ -20,8 +20,10 @@ class Questions extends Component {
                 </div>
                 <div className="Questions">
                 {this.state.CurrentPlayers.map((element,index) => {
+                    console.log(element.isAlive);
+                    if(element.isAlive)
                     return(
-                        <Avatars className="Avatar_questions" key={index} image={'/img/' + element.id + '.png'} avatar={element.avatar}  player= {element.player} />
+                        <Avatars className="Avatar_questions" key={index} image={'/img/' + element.id + '.png'} isAlive ={element.isAlive} avatar={element.avatar}  player= {element.player} />
                 )})}
                 </div>
                 <Reponse response={this.props.response} question={this.props.question}/>
