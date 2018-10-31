@@ -3,7 +3,6 @@ import React from 'react';
 
 const divStyle = {
     padding: '2%',
-    marginBottom: '4%',
 };
 
 const pStyle = {
