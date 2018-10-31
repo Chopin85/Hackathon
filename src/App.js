@@ -98,8 +98,6 @@ class App extends Component {
   }
 
   render() {  
-    const cloneCurrentPlayers = [...jsonPlayers];
-    console.log('State', this.state)
     if (this.state.step === 2) {
       return <Questions CurrentPlayers={this.getCurrentPlayers()} question={jsonQuestions[this.state.cptQuestions]} response={this.response}/>
     }

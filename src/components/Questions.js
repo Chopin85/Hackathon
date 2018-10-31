@@ -10,6 +10,9 @@ class Questions extends Component {
     state = { 
         CurrentPlayers: this.props.CurrentPlayers,
     }
+    componentDidMount(){
+        window.scrollTo(0,0)
+    }
     render() { 
         console.log('props',this.props.CurrentPlayers)
         return ( 
