@@ -4,11 +4,18 @@ import Avatars from './Avatar'
 // import './finisn.css'
 const titleStyle = {
     fontWeight: '100',
-    fontSize: 'calc(12px + 3vw)',
+    paddingTop: '70px ',
+    fontSize: 'calc(35px + 3vw)',
     color: 'white',
+    fontWeight: '800',
     // position: 'relative',
     marginBottom: '15vh'
 };
+
+const h2Style = {
+    fontSize: 'calc(18px + 3vw)',
+    color: 'white'
+}
 
 class Finish extends React.Component{
 
@@ -27,6 +34,10 @@ class Finish extends React.Component{
                         )}
                     )}
                 </div>
+                <h2 style={h2Style}>cool!!! You Survive</h2>
+                <p>
+                    <img src='https://media.giphy.com/media/2bUpP71bbVnZ3x7lgQ/giphy.gif' />
+                </p>
         </div>
         )
     }

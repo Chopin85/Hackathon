@@ -46,7 +46,6 @@ class DeadJackpot extends Component {
                 <div className="divDead">
                  <button className="buttonDead" onClick ={() => this.props.whoIsDead(idDeadPlayer)} >Suite</button>
                  </div>
-                   
             </div> 
            
             </div>

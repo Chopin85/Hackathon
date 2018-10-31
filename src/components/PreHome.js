@@ -55,9 +55,9 @@ export default class PreHome extends Component {
           </iframe>
         </div>
         <div style={{position: 'absolute', background: 'radial-gradient(transparent 20%, black 70%)', width: '100%', height: '100vh', opacity: '0.85'}} ></div>
-        <div style={subtitleStyle}>This is</div>
-        <div style={titleStyle}>MY HORROR STORY</div>
-        <button style={buttonStyle} onClick={() => this.props.setStep()}>
+        <div style={subtitleStyle} className="animated flipInX delay-3s">This is</div>
+        <div style={titleStyle} className="animated fadeInUpBig delay-4s">MY HORROR STORY</div>
+        <button style={buttonStyle} className="animated rotateInUpLeft delay-5s" onClick={() => this.props.setStep()}>
             <img style={fingerStyle} src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Skeleton_hand_pointing.svg/2000px-Skeleton_hand_pointing.svg.png" alt="Finger"/>
             ENTER
             <img style={fingerStyle2} src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Skeleton_hand_pointing.svg/2000px-Skeleton_hand_pointing.svg.png" alt="Finger"/>

@@ -110,7 +110,7 @@
 
 /* Button Question */
 
-.btn-response {
+/* .btn-response {
     padding: 30px !important;
     width: 250px;
     border-radius: 10px;
@@ -124,4 +124,31 @@
     color: #D90115 !important;
     background: #000 !important;
     border: 2px solid #fff !important;
+} */
+
+.button-response button {
+    color:#fff;
+    width: 200px !important;
+    text-decoration: none !important;
+    margin: 0 auto !important;
+    border-radius: 5px !important;
+    border: solid 1px #D94E3B !important;
+    background: #CB3B27 !important;
+    text-align: center !important;
+    padding: 20px 30px !important;
+    transition: all 0.1s !important;
+    box-shadow: 0px 9px 0px #84261A !important;
+    font-size: 25px !important;
+}
+
+/* .buttonHome_home button:hover {
+    color: #D90115;
+    background: #000;
+    border: 2px solid #fff;
+} */
+
+.button-response button:active{
+    box-shadow: 0px 2px 0px #84261A;
+    position: relative;
+    top: 7px;   
 }
