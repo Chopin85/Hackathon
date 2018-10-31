@@ -6,7 +6,7 @@ const players =[
             gender: "male",
             skinColor: "light",
             player : "",
-            isAlive :false,
+            isAlive :true,
             hadQuestion : false,
         },
         {
@@ -16,7 +16,7 @@ const players =[
             gender: "male",
             skinColor: "light",
             player : "",
-            isAlive :false,
+            isAlive :true,
             hadQuestion : false,
         },
         {
@@ -26,7 +26,7 @@ const players =[
             gender: "male",
             skinColor: "light",
             player : "",
-            isAlive :false,
+            isAlive :true,
             hadQuestion : false,
         },
         {
@@ -36,7 +36,7 @@ const players =[
             gender: "male",
             skinColor: "light",
             player : "",
-            isAlive :false,
+            isAlive :true,
             hadQuestion : false,
         },
         {
@@ -46,7 +46,7 @@ const players =[
             gender: "female",
             skinColor: "light",
             player : "", 
-            isAlive :false,
+            isAlive :true,
             hadQuestion : false,
         },
         {
@@ -55,7 +55,8 @@ const players =[
             photo : "/img/6.png",
             gender: "male",
             skinColor: "light",
-            player : "", isAlive :false,
+            player : "", 
+            isAlive :true,
             hadQuestion : false,
         }
     ]

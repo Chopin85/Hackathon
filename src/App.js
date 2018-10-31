@@ -30,13 +30,50 @@ class App extends Component {
     }));
   }
 
+  whoIsDead = (idPlayer) =>{
+    let deadPlayer = this.state.CurrentPlayers.filter(e => e.isAlive)[idPlayer]
+    deadPlayer.isAlive = false;
+  
+    this.setState(previousState => {
+
+      return {
+      CurrentPlayers: 
+      [...previousState.CurrentPlayers.filter(e => e.id !== deadPlayer.id), deadPlayer]
+      };
+     },() => {
+        if(this.checkSurvivors()) {
+          this.setState((previousState) => {
+            return {step:2,
+              cptQuestions: previousState.cptQuestions + 1
+            }
+          }) 
+        }
+        else {
+          this.setState((previousState) => {
+            return {step:4
+            }
+          }) 
+        }
+      }
+     );
+  } 
+
+  checkSurvivors =()=>{
+     let survivor = this.state.CurrentPlayers.filter( e => e.isAlive)   
+    if(survivor.length>1)
+      return true;
+    else
+      return false;
+  }
+
   response = (idPlayer, isCorrectAnswer) => {
+    
     if ((isCorrectAnswer === true) && (this.state.cptQuestions === 2))
     {
       this.setState(previousState => ({
         cptQuestions: previousState.cptQuestions + 1,
         step: 4
-      }));
+      })); 
     }
     else if (isCorrectAnswer === true) {
       this.setState(previousState => ({cptQuestions: previousState.cptQuestions + 1}));
@@ -48,21 +85,22 @@ class App extends Component {
     }
   }
 
-  render() {
-    console.log(this.state.CurrentPlayers);
+  render() {  
     if (this.state.step === 2) {
-      console.log("step2", this.state);
-      
-      return <Questions CurrentPlayers={this.state.CurrentPlayers} listPlayers={jsonPlayers} question={jsonQuestions[this.state.cptQuestions]} response={this.response}/>
+      return <Questions CurrentPlayers={this.state.CurrentPlayers} question={jsonQuestions[this.state.cptQuestions]} response={this.response}/>
     }
     else if (this.state.step === 3) {
-      return <DeadJackpot listPlayers={this.state.CurrentPlayers} />
+      return <DeadJackpot listPlayers={this.state.CurrentPlayers.filter(e => e.isAlive)} whoIsDead ={this.whoIsDead} />
     }
     else if (this.state.step === 1) {
       return <Home listPlayers={jsonPlayers} startGame ={this.startGame}/>
     }
     else if (this.state.step === 4) {
+<<<<<<< HEAD
       return <Finish listPlayers={this.state.CurrentPlayers.filter(e => e.isAlive)} />
+=======
+      return <Finish listPlayers={this.state.CurrentPlayers[0]} />
+>>>>>>> 4d9482ded0306833271d4d192437a415582c0d96
     }
     else {
       return <div>Error Step</div>

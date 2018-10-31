@@ -6,7 +6,7 @@ import Paper from '@material-ui/core/Paper';
 
 class Reponse extends Component {
      verifyReponse = (resp, player) => {
-        (resp === this.props.question.correctAnswer) ?  this.props.response(player , true) : this.props.response(player, false)
+        ((resp === this.props.question.correctAnswer) ?  this.props.response(player , true) : this.props.response(player, false))
         this.setState({selectedValue: ''})
     }
 

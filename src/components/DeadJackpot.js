@@ -7,20 +7,23 @@ import Grid from '@material-ui/core/Grid';
 import jsonDeath from '../constants/DeathType';
 import jsonSuplices from '../constants/SuplicesType';
 
-
+let  idDeadPlayer =0;
 class DeadJackpot extends Component {
     
-    state = {  }
+    state = { 
+        idDeadPlayer :0
+     }
     //en attente du nombre de joueurs dans le tableau 
 
     getRandomInt = (nbPlayers) => {
-        return (Math.floor(Math.random() * Math.floor(nbPlayers)));
+         idDeadPlayer = (Math.floor(Math.random() * Math.floor(nbPlayers)));
+        return idDeadPlayer
       }
-
     getRandom = (elem) => {
+       
     return (Math.floor(Math.random() * Math.floor(elem)))+1;
     }
-    
+
     render() { 
         return ( 
             <div className="death-roulette">
@@ -35,7 +38,11 @@ class DeadJackpot extends Component {
                     <Grid item xs={12} md={4} >
                         <Suplices listSuplices={jsonSuplices} idSuplice={this.getRandom(jsonSuplices.length)}/>
                     </Grid>
-                 </Grid>           
+                 </Grid>
+                 <Grid>
+                 <button onClick ={() => this.props.whoIsDead(idDeadPlayer)} >relance le jeux</button>  
+                 </Grid>
+                          
             </div> 
         );
     }
