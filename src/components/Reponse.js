@@ -25,8 +25,9 @@ class Reponse extends Component {
     
     render() {
         return ( 
-            <div className="response">
+            <div style={{background: '#212121'}}>
             <p style={{color: "White", display: 'flex', justifyContent: 'center', fontSize:'20px'}} >{this.props.question.question}</p>
+            <div className="response">
             {/* {this.props.question.ansewers.map((x, index) =>
             <button key={index} onClick={() => this.verifyReponse(index, 1)}>
               {x}
@@ -49,12 +50,13 @@ class Reponse extends Component {
                         </div>
                 )}
               <br/>
+            </div>
               <div className="button-response" style={{display: 'flex', justifyContent: 'center'}}>
                 <Button className="btn-response" onClick={() => this.verifyReponse(parseInt(this.state.selectedValue), 1)} variant="contained">
                     Valid
                 </Button>
               </div>
-          </div>
+            </div>
           );
     }
 }

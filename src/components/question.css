@@ -44,12 +44,15 @@
     padding: 30px;
 }
 .response {
-    background: #212121;
+    background: #212121;    
+    display: flex;
+    margin: 2% 15%;
 }
 .radio{
     width: 60%;
     margin: auto;
     color: white;
+    text-align: center;
 }
 .check {
     color: white;

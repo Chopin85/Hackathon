@@ -3,10 +3,11 @@ import Avatars from './Avatar'
 import './dead.css'
 
 const titleStyle = {
-    fontWeight: '100',
-    fontSize: 'calc(12px + 3vw)',
-    color: 'white',
-    marginBottom: '15vh'
+    color: 'red',
+    fontSize: 'calc(12px + 5vw)',
+    padding: '30px',
+    textAlign: 'center',
+    fontFamily: 'Creepster',   
 };
 
 class Finish extends React.Component{
@@ -18,7 +19,7 @@ class Finish extends React.Component{
         console.log('finish', this.state.CurrentPlayers)
         return (
             <div style={{textAlign:"center"}}>
-                <h1 style={titleStyle}>Finish</h1>
+                <h1 style={titleStyle}>You survived</h1>
                 <div className="Avatar_finish">
                     {this.state.CurrentPlayers.map((element,index) => {
                         return(
