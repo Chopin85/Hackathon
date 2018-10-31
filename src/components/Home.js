@@ -38,7 +38,7 @@ class Home extends Component {
     }
 
     start = () => {
-        if(this.state.people.filter(e => e.player.length !== 0).length > 0)
+        if(this.state.people.filter(e => e.player.length !== 0).length > 1)
             this.props.startGame(this.state.people)
     }
 
