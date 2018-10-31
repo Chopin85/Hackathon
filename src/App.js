@@ -7,6 +7,7 @@ import './App.css';
 
 import jsonQuestions from './constants/questions';
 import jsonPlayers from './constants/players';
+import PreHome from './components/PreHome';
 
 class App extends Component {
 
@@ -16,11 +17,11 @@ class App extends Component {
     cptQuestions : 0
   }
 
-  componentDidMount() {
-    this.setState({
-      step: 1
-    })
-  }
+//   componentDidMount() {
+//     this.setState({
+//       step: 1
+//     })
+//   }
 
   startGame =(players)=>{
     const filterPlayers = players.filter(element => element.player !== "")
@@ -66,11 +67,17 @@ class App extends Component {
     else
       return false;
   }
+
   getCurrentPlayers =()=>{
     console.log('mes state dans getcurentPlayers ',this.state.CurrentPlayers);
     
     return this.state.CurrentPlayers
   }
+
+  setStep = () => {
+      this.setState({step: 1})
+  }
+
   response = (idPlayer, isCorrectAnswer) => {
     
     if ((isCorrectAnswer === true) && (this.state.cptQuestions === 2))
@@ -95,6 +102,9 @@ class App extends Component {
     if (this.state.step === 2) {
       return <Questions CurrentPlayers={this.getCurrentPlayers()} question={jsonQuestions[this.state.cptQuestions]} response={this.response}/>
     }
+    else if (this.state.step === -1) {
+        return <PreHome setStep={this.setStep}/>
+    }
     else if (this.state.step === 3) {
       return <DeadJackpot listPlayers={this.state.CurrentPlayers.filter(e => e.isAlive)} whoIsDead ={this.whoIsDead} />
     }
@@ -102,9 +112,7 @@ class App extends Component {
       return <Home listPlayers={jsonPlayers} startGame ={this.startGame}/>
     }
     else if (this.state.step === 4) {
-
       return <Finish listPlayers={this.state.CurrentPlayers.filter(e => e.isAlive)} />
-
     }
     else {
       return <div>Error Step</div>
