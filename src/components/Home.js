@@ -36,7 +36,6 @@ class Home extends Component {
         // console.log(this.state.idSelect)
         return ( 
             <div className="Home">
-
                 <Header />
                 <div className="bloc-presentation">
                     <p className="text-presentation">Vous avez toujours rêvé d’invoquer les esprits , ce soir c’est Halloween, inscrivez-vous à la prochaine session avec vos amis. Frissons garantis !</p>
