@@ -3,18 +3,19 @@ import Avatars from './Avatar'
 import './dead.css'
 
 const titleStyle = {
-    fontWeight: '100',
-    paddingTop: '70px ',
-    fontSize: 'calc(35px + 3vw)',
-    color: 'white',
-    fontWeight: '800',
-    // position: 'relative',
-    marginBottom: '15vh'
-};
+
+    margin: '5vh 0',
+    fontFamily: 'Creepster',
+    fontSize: 'calc(12px + 5vw)',
+    textAlign: 'center',
+    color: 'red'
+    };
+
 
 const h2Style = {
-    fontSize: 'calc(18px + 3vw)',
-    color: 'white'
+    fontSize: 'calc(5px + 2vw)',
+    color: 'white',
+    margin: '2vh 0'
 }
 
 class Finish extends React.Component{
@@ -34,10 +35,13 @@ class Finish extends React.Component{
                         )}
                     )}
                 </div>
-                <h2 style={h2Style}>cool!!! You Survive</h2>
+                <h2 style={h2Style}>Congrats!</h2>
                 <p>
                     <img src='https://media.giphy.com/media/2bUpP71bbVnZ3x7lgQ/giphy.gif' />
                 </p>
+                <div className="divDead">
+                    <button className="buttonDead" onClick ={() => window.location.reload()} >Rejouer</button>
+                </div>
         </div>
         )
     }
