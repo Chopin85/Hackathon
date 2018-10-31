@@ -18,15 +18,11 @@ class DeadJackpot extends Component {
          idDeadPlayer = (Math.floor(Math.random() * Math.floor(nbPlayers)));
         return idDeadPlayer
       }
-
     getRandom = (elem) => {
        
     return (Math.floor(Math.random() * Math.floor(elem)))+1;
     }
-    componentDidMount(){
-        console.log("id du mort ",idDeadPlayer);
-        this.props.whoIsDead(idDeadPlayer)
-    }
+
     render() { 
         return ( 
             <div>
@@ -34,6 +30,7 @@ class DeadJackpot extends Component {
                  <PlayersJackpot listPlayers={this.props.listPlayers} idPlayers={this.getRandomInt(this.props.listPlayers.length)}/>
                  <MyDeathJackpot listDeath={jsonDeath} idDeath={this.getRandom(jsonDeath.length)}/>
                  <Suplices listSuplices={jsonSuplices} idSuplice={this.getRandom(jsonSuplices.length)}/>
+                 <button onClick ={() => this.props.whoIsDead(idDeadPlayer)} >relance le jeux</button>
             </div> 
         );
     }

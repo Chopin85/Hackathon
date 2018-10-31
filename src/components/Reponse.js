@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 
 class Reponse extends Component {
      verifyReponse = (resp, player) => {
-        (resp === this.props.question.correctAnswer) ?  this.props.response(player , true) : this.props.response(player, false)
+        ((resp === this.props.question.correctAnswer) ?  this.props.response(player , true) : this.props.response(player, false))
         this.setState({selectedValue: ''})
     }
 
