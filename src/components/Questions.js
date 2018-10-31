@@ -28,7 +28,7 @@ class Questions extends Component {
                 <div className="Questions">
                 {this.state.CurrentPlayers.map((element,index) => {
                     return(
-                        <Avatars className="Avatar_questions" key={index} image={'/img/' + element.id + '.png'} avatar={element.avatar}  player= {element.player} />
+                        <Avatars dead={element.isAlive} className="Avatar_questions" key={index} image={'/img/' + element.id + '.png'} avatar={element.avatar}  player= {element.player} />
                 )})}
                 </div>
                 <Reponse class="response" response={this.props.response} question={this.props.question}/>
