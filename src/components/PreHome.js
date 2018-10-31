@@ -24,7 +24,8 @@ const buttonStyle = {
     border: 'none',
     fontFamily: 'Creepster',
     fontSize: '5vw',
-    width: '50%'
+    width: '50%',
+    color: 'white'
 };
 
 const fingerStyle = {
@@ -46,7 +47,7 @@ export default class PreHome extends Component {
     return (
       <div style={{textAlign: 'center'}}>
         <div style={{position: 'fixed', zIndex: '-99', width: '100%', height: '100%', filter: 'grayscale(90%)'}}>
-          <iframe frameborder="0" height="100%" width="100%" 
+          <iframe frameborder="0" height="100%" width="100%"
             src="https://youtube.com/embed/NixMabI45s0?autoplay=1&controls=0&showinfo=0&autohide=1&loop=1&modestbranding=1&rel=0">
           </iframe>
         </div>
