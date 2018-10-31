@@ -4,6 +4,8 @@ import MyDeathJackpot from './MyDeathJackpot';
 import Suplices from './Suplices';
 import Grid from '@material-ui/core/Grid';
 
+import './dead.css'
+
 import jsonDeath from '../constants/DeathType';
 import jsonSuplices from '../constants/SuplicesType';
 
@@ -26,6 +28,7 @@ class DeadJackpot extends Component {
 
     render() { 
         return ( 
+            <div>
             <div className="death-roulette">
                 <p className="tooBad">Too bad, you died !</p>
                 <Grid container >
@@ -38,12 +41,15 @@ class DeadJackpot extends Component {
                     <Grid item xs={12} md={4} >
                         <Suplices listSuplices={jsonSuplices} idSuplice={this.getRandom(jsonSuplices.length)}/>
                     </Grid>
-                 </Grid>
-                 <Grid>
-                 <button onClick ={() => this.props.whoIsDead(idDeadPlayer)} >relance le jeux</button>  
-                 </Grid>
-                          
+                 </Grid> 
+
+                <div className="divDead">
+                 <button className="buttonDead" onClick ={() => this.props.whoIsDead(idDeadPlayer)} >Suite</button>
+                 </div>
+                   
             </div> 
+           
+            </div>
         );
     }
 }

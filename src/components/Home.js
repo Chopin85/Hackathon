@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import Personnage from './Personnage';
+import Header from './Header-Home'
 
 import './home.css'
-import Header from './Header-Home';
 
 class Home extends Component {
+
+    // constructor () {
+    //     super();
+    //     console.log("constructor");
+    // }
+
     state = { 
         idSelect: null,
-        people : this.props.listPlayers,
+        people : this.props.listPlayers
     }
 
     handelChange = (e) => {
@@ -31,12 +37,15 @@ class Home extends Component {
         this.setState({idSelect : id})
     }
 
+    start = () => {
+        if(this.state.people.filter(e => e.player.length !== 0).length > 0)
+            this.props.startGame(this.state.people)
+    }
 
     render() { 
-        // console.log(this.state.idSelect)
+        console.log("render")
         return ( 
             <div className="Home">
-
                 <Header />
                 <div className="bloc-presentation">
                     <p className="text-presentation">Vous avez toujours rêvé d’invoquer les esprits , ce soir c’est Halloween, inscrivez-vous à la prochaine session avec vos amis. Frissons garantis !</p>
@@ -47,11 +56,10 @@ class Home extends Component {
                     )}
                 </div>
                 <div className="buttonHome_home">
-                    <button onClick ={() => this.props.startGame(this.state.people)}> Start Game</button>
+                    <button onClick ={this.start}> Start Game</button>
                 </div>
 
             </div>
-            
         );
     }
 }

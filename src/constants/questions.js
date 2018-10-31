@@ -1,23 +1,23 @@
 const questions =[
 {
     deamon: 'Freddy',
-    question :'gants?',
+    question :'Comment ai-je l\'habitude de tuer mes proies?' ,
     isEnable :true,
-    ansewers:['oui','non'],
+    ansewers:['avec des lames de rasoir','avec un pieu', 'avec un marteau'],
     correctAnswer :0
 },
 {
-    deamon: 'dark',
-    question :'force ?',
+    deamon: 'Freddy',
+    question :'Où suis-je né?',
     isEnable :true,
-    ansewers:['oui','non'],
-    correctAnswer :0
+    ansewers:['dans un chenil', 'dans un orphelinat','dans un hopital psychiatrique'],
+    correctAnswer :2
 },
 {
-    deamon: 'casimir',
-    question :'button ?',
+    deamon: 'Freddy',
+    question :'Quel est le moment favori de Freddy pour attaquer?',
     isEnable :true,
-    ansewers:['oui','non'],
+    ansewers:['dans les rêves','à la sortie de l\'école', 'n\'importe quand'],
     correctAnswer :0
 },
 ]

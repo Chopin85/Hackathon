@@ -1,0 +1,12 @@
+
+
+.Avatar_finish {
+    /* border: 1px solid red; */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
