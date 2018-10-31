@@ -12,7 +12,7 @@ const pStyle = {
     textAlign: 'center',
     color: 'red'
 };
-  
+
 
 const Header = () => (
     <div style={divStyle}>
