@@ -50,7 +50,6 @@ class App extends Component {
 
   render() {
     console.log(this.state.CurrentPlayers);
-    
     if (this.state.step === 2) {
       console.log("step2", this.state);
       

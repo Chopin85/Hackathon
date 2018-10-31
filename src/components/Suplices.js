@@ -18,9 +18,13 @@ class Suplices extends Component {
 
     render() { 
         return (  
-            <div>
-                <p>{this.state.suplice.mort}</p>
+            <div className="blocSuplice roulette">
+            <div className="roulette-child">
+                <hr/>
+                <p className="titles-roulette">{this.state.suplice.mort}</p>
                 {/* <img src={this.state.suplice.url} alt={this.state.suplice.mort}/>  */}
+                <hr/>
+                </div>
              </div>
         );
     }
