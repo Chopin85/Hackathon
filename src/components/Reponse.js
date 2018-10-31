@@ -4,6 +4,9 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper';
 
+import './question.css'
+
+
 class Reponse extends Component {
      verifyReponse = (resp, player) => {
         ((resp === this.props.question.correctAnswer) ?  this.props.response(player , true) : this.props.response(player, false))
@@ -47,7 +50,7 @@ class Reponse extends Component {
                 )}
               <br/>
               <div className="button-response" style={{display: 'flex', justifyContent: 'center'}}>
-                <Button className="button-response" onClick={() => this.verifyReponse(parseInt(this.state.selectedValue), 1)} variant="contained">
+                <Button className="btn-response" onClick={() => this.verifyReponse(parseInt(this.state.selectedValue), 1)} variant="contained">
                     Valid
                 </Button>
               </div>

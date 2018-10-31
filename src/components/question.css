@@ -107,3 +107,21 @@
     color: #c2c2c2;
     height: 35px;
 }
+
+/* Button Question */
+
+.btn-response {
+    padding: 30px !important;
+    width: 250px;
+    border-radius: 10px;
+    border: 2px solid #000 !important   ;
+    background: #D90115 !important;
+    font-size: 25px !important;
+    color: #fff !important;
+}
+
+.btn-response:hover {
+    color: #D90115 !important;
+    background: #000 !important;
+    border: 2px solid #fff !important;
+}

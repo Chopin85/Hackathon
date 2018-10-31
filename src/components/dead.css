@@ -1,0 +1,23 @@
+.divDead {
+    width: 100vw;
+    margin: auto;
+    height: 100px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonDead {
+    padding: 30px;
+    width: 250px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    background: #D90115;
+    font-size: 25px;
+}
+
+.buttonDead:hover {
+    color: #D90115;
+    background: #000;
+    border: 2px solid #fff;
+}
