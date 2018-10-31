@@ -23,7 +23,7 @@ class Reponse extends Component {
     render() {
         return ( 
             <div>
-            <p style={{display: 'flex', justifyContent: 'center'}} >{this.props.question.question}</p>
+            <p style={{color: "White", display: 'flex', justifyContent: 'center'}} >{this.props.question.question}</p>
             {/* {this.props.question.ansewers.map((x, index) =>
             <button key={index} onClick={() => this.verifyReponse(index, 1)}>
               {x}
