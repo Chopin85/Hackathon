@@ -1,12 +1,11 @@
 import React from 'react';
 import Avatars from './Avatar'
+import './dead.css'
 
-// import './finisn.css'
 const titleStyle = {
     fontWeight: '100',
     fontSize: 'calc(12px + 3vw)',
     color: 'white',
-    // position: 'relative',
     marginBottom: '15vh'
 };
 
@@ -26,6 +25,9 @@ class Finish extends React.Component{
                             <Avatars isAlive={true} key={index} image={'/img/' + element.id + '.png'} avatar={element.avatar}  player= {element.player} />
                         )}
                     )}
+                </div>
+                <div className="divDead">
+                    <button className="buttonDead" onClick ={() => window.location.reload()} >Rejouer</button>
                 </div>
         </div>
         )

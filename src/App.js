@@ -98,6 +98,7 @@ class App extends Component {
   }
 
   render() {  
+    const cloneCurrentPlayers = [...jsonPlayers];
     console.log('State', this.state)
     if (this.state.step === 2) {
       return <Questions CurrentPlayers={this.getCurrentPlayers()} question={jsonQuestions[this.state.cptQuestions]} response={this.response}/>
@@ -112,7 +113,7 @@ class App extends Component {
       return <Home listPlayers={jsonPlayers} startGame ={this.startGame}/>
     }
     else if (this.state.step === 4) {
-      return <Finish listPlayers={this.state.CurrentPlayers.filter(e => e.isAlive)} />
+      return <Finish listPlayers={this.state.CurrentPlayers.filter(e => e.isAlive)} reInit={this.reInitGame}/>
     }
     else {
       return <div>Error Step</div>
