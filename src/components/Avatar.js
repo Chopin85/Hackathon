@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Avatars = (props) => (
-    <div>
+    
+    <div className="Avatar_avatar">
         <p>{props.avatar}</p>
-        <img src={props.photo}alt={props.avatar}/>
-        <p></p>
+        <img src={props.image}alt={props.avatar}/> 
+        <p>{props.player}</p>   
     </div>
 )
 export default Avatars;

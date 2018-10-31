@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Personnage from './Personnage';
 
-import { Grid }  from '@material-ui/core';
-
 import './home.css'
 
 class Home extends Component {
@@ -39,12 +37,15 @@ class Home extends Component {
             <div className="Home">
 
                 <Header />
-                <div className="avatars">
+                <div className="bloc-presentation">
+                    <p className="text-presentation">Vous avez toujours rêvé d’invoquer les esprits , ce soir c’est Halloween, inscrivez-vous à la prochaine session avec vos amis. Frissons garantis !</p>
+                </div>
+                <div className="avatars_home">
                     {this.state.people.sort((a,b) => a.id-b.id).map((element , index) =>
-                        <Personnage image={element.photo} avatar={element.avatar} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
+                        <Personnage image={'/img/' + element.id + '.png'} avatar={element.avatar}  player= {element.player} getId={this.getId} id={element.id} key={index} method={this.handelChange} />
                     )}
                 </div>
-                <div className="buttonHome">
+                <div className="buttonHome_home">
                     <button onClick ={() => this.props.startGame(this.state.people)}> Start Game</button>
                 </div>
 
