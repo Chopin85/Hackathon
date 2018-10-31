@@ -39,7 +39,10 @@ class DeadJackpot extends Component {
                         <Suplices listSuplices={jsonSuplices} idSuplice={this.getRandom(jsonSuplices.length)}/>
                     </Grid>
                  </Grid>
-                 <button onClick ={() => this.props.whoIsDead(idDeadPlayer)} >relance le jeux</button>           
+                 <Grid>
+                 <button onClick ={() => this.props.whoIsDead(idDeadPlayer)} >relance le jeux</button>  
+                 </Grid>
+                          
             </div> 
         );
     }
