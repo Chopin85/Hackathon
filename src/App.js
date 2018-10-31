@@ -28,7 +28,7 @@ class App extends Component {
     this.setState( () => ({
       CurrentPlayers :filterPlayers,
       step: 2
-    }));
+    }),() => this.getCurrentPlayers());
   }
 
   whoIsDead = (idPlayer) =>{
@@ -60,12 +60,20 @@ class App extends Component {
   } 
 
   checkSurvivors =()=>{
+    this.getCurrentPlayers()
      let survivor = this.state.CurrentPlayers.filter( e => e.isAlive)   
     if(survivor.length>1)
       return true;
     else
       return false;
   }
+
+  getCurrentPlayers =()=>{
+    console.log('mes state dans getcurentPlayers ',this.state.CurrentPlayers);
+    
+    return this.state.CurrentPlayers
+  }
+
   setStep = () => {
       this.setState({step: 1})
   }
@@ -86,12 +94,13 @@ class App extends Component {
       this.setState(() => ({
         step: 3
       }));      
-    }
+    } 
   }
 
   render() {  
+    console.log('State', this.state)
     if (this.state.step === 2) {
-      return <Questions CurrentPlayers={this.state.CurrentPlayers} question={jsonQuestions[this.state.cptQuestions]} response={this.response}/>
+      return <Questions CurrentPlayers={this.getCurrentPlayers()} question={jsonQuestions[this.state.cptQuestions]} response={this.response}/>
     }
     else if (this.state.step === -1) {
         return <PreHome setStep={this.setStep}/>

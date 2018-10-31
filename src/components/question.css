@@ -80,6 +80,30 @@
 }
 
 
-.dead {
-    border: 3px dashed pink;
+
+
+.Avatar_dead {
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction:column ; 
+    /* border: 1px dashed red;  */
+    /* background: url('/img/tombe.png') */
+}
+
+.Avatar_dead p, img {
+    margin-bottom: 5px;
+}
+
+.Avatar_dead img {
+    height: 200px;
+    width: 220px;
+    opacity: 0.2;
+    background: red;
+}
+
+.Avatar_dead p {
+    color: #c2c2c2;
+    height: 35px;
 }

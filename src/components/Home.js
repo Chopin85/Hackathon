@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Personnage from './Personnage';
+import Header from './Header-Home'
 
 import './home.css'
-import Header from './Header-Home';
 
 class Home extends Component {
     state = { 
@@ -54,7 +54,6 @@ class Home extends Component {
                 </div>
 
             </div>
-            
         );
     }
 }

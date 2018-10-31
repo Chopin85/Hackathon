@@ -1,0 +1,12 @@
+
+
+#Avatar_finish {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+}
+
+.Avatar_avatar {
+    
+}
